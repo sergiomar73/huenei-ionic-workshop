@@ -1,0 +1,7 @@
+{
+  "name": "0-clima-start",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
