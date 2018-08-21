@@ -1,19 +1,23 @@
 <ion-menu [content]="content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Menu</ion-title>
+      <!-- v2 Cambio Título -->
+      <ion-title>Huenei Clima</ion-title>
     </ion-toolbar>
   </ion-header>
-
   <ion-content>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+        <!-- v2 Agrego ícono -->
+        <ion-icon name="{{p.icon}}"></ion-icon>{{p.title}}
       </button>
     </ion-list>
   </ion-content>
-
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title><a href="https://darksky.net/poweredby/">Datos por Dark Sky</a></ion-title>
+    </ion-toolbar>
+  </ion-footer>
 </ion-menu>
-
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

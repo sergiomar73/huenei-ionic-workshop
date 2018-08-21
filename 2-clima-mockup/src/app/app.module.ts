@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpModule } from '@angular/http'; // v2
 
 import { MyApp } from './app.component';
 import { ClimaPage } from '../pages/clima/clima';
@@ -19,6 +20,7 @@ import { GeocodeProvider } from '../providers/geocode/geocode';
   ],
   imports: [
     BrowserModule,
+    HttpModule, // v2
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],

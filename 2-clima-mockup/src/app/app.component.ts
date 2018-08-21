@@ -14,15 +14,15 @@ export class MyApp {
 
   rootPage: any = ClimaPage;
 
-  pages: Array<{title: string, component: any}>;
+  // v2 Agrego Icono
+  pages: Array<{ title: string, component: any, icon: string }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
-
-    // used for an example of ngFor and navigation
+    // v2 Agrego Icono
     this.pages = [
-      { title: 'Clima', component: ClimaPage },
-      { title: 'Lugares', component: LugaresPage }
+      { title: 'Clima', component: ClimaPage, icon: 'create' },
+      { title: 'Lugares', component: LugaresPage, icon: 'pin' }
     ];
 
   }
