@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the LugaresPage page.
+ * Generated class for the LugarPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-lugares',
-  templateUrl: 'lugares.html',
+  selector: 'page-lugar',
+  templateUrl: 'lugar.html',
 })
-export class LugaresPage {
+export class LugarPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LugaresPage');
+    console.log('ionViewDidLoad LugarPage');
   }
 
 }
