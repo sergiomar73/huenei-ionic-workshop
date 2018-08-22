@@ -1,10 +1,8 @@
-Workshop de Ionic 3, 
+# Workshop Introducción a Ionic 3
 
-Workshop Introducción a Ionic 3
+###### Presentado en Huenei IT, en San Antonio de Padua, Argentina, el día 22/08/2018
 
-Presentado en Huenei IT, en San Antonio de Padua, Argentina, el día 22/08/2018
-
-Temario:
+### Temario:
 
 • Veremos cómo iniciar con Ionic 3 y construiremos una aplicación completa desde cero. 
 
