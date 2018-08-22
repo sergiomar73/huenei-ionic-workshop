@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar>
+    <!-- v2 Agrego botón del Menú -->
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!-- v2 Cambio Título -->
+    <ion-title>Lugares</ion-title>
+    <!-- v4 Botón Nuevo Lugar -->
+    <ion-buttons end>
+      <button ion-button icon-only (click)="nuevoLugar()">
+        <ion-icon name="add"></ion-icon>&nbsp;Nuevo
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <!-- v4 Selector de Vista -->
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="vista" color="primary">
+      <ion-segment-button value="list">
+        <ion-icon name="list"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="card">
+        <ion-icon name="list-box"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!-- v4 Lista de Lugares -->
+  <div [ngSwitch]="vista">
+    <ion-list *ngSwitchCase="'list'">
+      <ion-item-sliding *ngFor="let	lugar	of	lugares">
+        <ion-item>
+          <ion-icon name="pin" item-start large></ion-icon>
+          <h2>{{lugar.nombre}}</h2>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="danger" (click)="borrarLugar(lugar)">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+    <ion-list *ngSwitchCase="'card'">
+      <ion-card *ngFor="let	lugar	of	lugares">
+        <ion-item>
+          <ion-icon name="pin" item-start large></ion-icon>
+          <h2>{{lugar.nombre}}</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </ion-item>
+        <ion-item>
+          <span item-start></span>
+          <span item-start></span>
+          <button ion-button icon-start item-end clear color="danger" (click)="borrarLugar(lugar)">
+            <ion-icon name="trash"></ion-icon>
+            Borrar
+          </button>
+        </ion-item>
+      </ion-card>
+    </ion-list>
+  </div>
+</ion-content>
